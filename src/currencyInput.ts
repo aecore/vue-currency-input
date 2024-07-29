@@ -49,7 +49,7 @@ export class CurrencyInput {
 
   setOptions(options: CurrencyInputOptions): void {
     this.init(options)
-    this.format(this.currencyFormat.format(this.validateValueRange(this.numberValue)))
+    this.format(this.currencyFormat.format(this.validateValueRange(this.numberValue)), this.options.hideNegligibleDecimalDigitsOnFocus);
     this.onChange(this.getValue())
   }
 
